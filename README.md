@@ -1,5 +1,14 @@
 # Log4Shell Vulnerable WebApp PoC
 
+################################################################################################################
+<b>Webmaster-Exit-1's Forked, Updated, Bug fixes, with Correct versions of software NOW included!</b><br>      
+################################################################################################################
+<b>All my fork of this project does is make this tutorial actually useable. I'm not sure why the dev's</b><br>
+<b>use incorrect software and software names. Almost as if they we're self sabotaging this project. Very odd.</b><br>
+<b>I hope that my updated, corrected fork of this project comes in handy for you all.</b><br>
+<b>Hack until it hurts. :)  -- WebMaster-Exit-1</b><br>
+################################################################################################################
+
 A Proof-Of-Concept vulnerable web application for the Log4J vulnerability (CVE-2021-44228), based off Kozmer's Log4Shell POC.  This simple fork allows a web browser's User Agent to be logged when the site is visited.
 Recently there was a new vulnerability in log4j, a java logging library that is very widely used in the likes of elasticsearch, minecraft and numerous others.
 
