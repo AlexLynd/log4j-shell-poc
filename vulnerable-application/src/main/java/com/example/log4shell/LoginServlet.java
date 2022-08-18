@@ -1,21 +1,23 @@
 package com.example.log4shell;
 
-import java.io.*;
-import javax.servlet.ServletException;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-import com.sun.deploy.net.HttpRequest;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 
 @WebServlet(name = "loginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	    String userAgent = req.getHeader("user-agent");
+        String userAgent = req.getHeader("user-agent");
         String userName = req.getParameter("uname");
         String password = req.getParameter("password");
 
@@ -23,14 +25,13 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("<html><body>");
 
-        if(userName.equals("admin") && password.equals("password")){
+        if (userName.equals("admin") && password.equals("password")) {
             out.println("Welcome Back Admin!");
-        }
-        else {
+        } else {
             // vulnerable code
             Logger logger = LogManager.getLogger(com.example.log4shell.log4j.class);
             logger.error(userAgent); // log browser user agent!
-            // logger.error(userName);  // log username instead
+            // logger.error(userName); // log username instead
 
             out.println("<code> Ur user agent has been logged loser >:P </code>");
         }
