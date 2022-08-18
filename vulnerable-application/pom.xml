@@ -55,9 +55,9 @@
         <dependency>
             <groupId>com.sun</groupId>
             <artifactId>deploy</artifactId>
-<!--            <scope>system</scope>-->
+        <!--<scope>system</scope>-->
             <version>1.8</version>
-<!--            <systemPath>/home/alex/log4j-shell-poc/vulnerable-application/deploy.jar</systemPath>-->
+        <!--<systemPath>/home/alex/log4j-shell-poc/vulnerable-application/deploy.jar</systemPath>-->
 
         </dependency>
 
